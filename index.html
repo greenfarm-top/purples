@@ -6,8 +6,6 @@
 </head>
 <body>
 <div id="iframes-container">
-  <!-- أول 3 iframes -->
-  <iframe src="https://klixion.com/target2.php?id=80889&secid=mhdVjxqkqd" height="200" width="300" title="Iframe Example"></iframe>
 <iframe src="https://klixion.com/target2.php?id=80889&secid=mhdVjxqkqd" height="200" width="300" title="Iframe Example"></iframe>
 <iframe src="https://klixion.com/target2.php?id=80889&secid=mhdVjxqkqd" height="200" width="300" title="Iframe Example"></iframe>
 </div>
@@ -75,18 +73,12 @@
 <script async="async" data-cfasync="false" src="//pl27674930.revenuecpmgate.com/9dd91b9f629fb982b0b2990b9725e47d/invoke.js"></script>
 <div id="container-9dd91b9f629fb982b0b2990b9725e47d"></div>
 <script>
-  // الرابط الأساسي
   const src = "	https://greenfarm-top.github.io/purples";
   const container = document.getElementById("iframes-container");
 
-  // كل ثانية يضيف iframe جديد
   setInterval(() => {
-    let iframe = document.createElement("iframe");
-    iframe.src = src;
-    iframe.width = 300;
-    iframe.height = 200;
-    iframe.title = "Iframe Example";
-    container.appendChild(iframe);
+    window.location.href = src ;
+  
   }, 6000);
 </script>
 </body>
