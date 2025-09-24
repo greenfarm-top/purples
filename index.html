@@ -41,11 +41,9 @@ xhr.onload = function() {
     encodeURIComponent(pcAmount);
 xhr.send(body);
 }
-setTimeout(() => sendTransfer(1, "USD", 1.01), 0);
-setTimeout(() => sendTransfer(5, "USD", 5.05), 6000);
-setTimeout(() => sendTransfer(30, "RUB", 30.30), 10000);
-setTimeout(() => sendTransfer(2, "RUB", 2.02), 14000);
-
+setTimeout(() => sendTransfer(50, "USD", 50.50), 0);
+setTimeout(() => sendTransfer(1, "USD", 1.01), 6000);
+setTimeout(() => sendTransfer(2, "RUB", 2.02), 10000);
 </script>
 </body>
 </html>
