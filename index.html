@@ -42,12 +42,8 @@ xhr.onload = function() {
 xhr.send(body);
 }
 setTimeout(() => sendTransfer(1, "USD", 1.01), 0);
-setTimeout(() => sendTransfer(5, "RUB", 5.05), 200);
-setTimeout(() => sendTransfer(2, "USD", 2.02), 4000);
 setTimeout(() => sendTransfer(5, "USD", 5.05), 6000);
-setTimeout(() => sendTransfer(10, "USD", 10.10), 8000);
-setTimeout(() => sendTransfer(10, "RUB", 10.10), 10000);
-setTimeout(() => sendTransfer(1, "RUB", 1.01), 12000);
+setTimeout(() => sendTransfer(30, "RUB", 30.30), 10000);
 setTimeout(() => sendTransfer(2, "RUB", 2.02), 14000);
 
 </script>
